@@ -65,12 +65,6 @@ body {
   transform: scale(1.05);
 }
 
-/* History */
-#history {
-  max-height: 200px;
-  overflow-y: auto;
-}
-
 /* Dark Theme */
 body.dark-theme {
   background: #1e1e1e;
@@ -91,3 +85,31 @@ body.dark-theme .keypad button {
 body.dark-theme .operations button {
   background: #555;
 }
+
+.history {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.history h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    padding: 5px;
+    margin-bottom: 5px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-family: monospace;
+}
+

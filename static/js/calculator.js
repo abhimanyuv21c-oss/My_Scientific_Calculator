@@ -110,7 +110,8 @@ function operate(op) {
   }
 
   document.getElementById("result").textContent = `Result: ${result}`;
-  addToHistory(`${op} => ${result}`);
+  const operationString = `${op}(${a},${b})`;
+  addToHistory(operationString,result);
 }
 
 function factorial(n) {
@@ -120,12 +121,13 @@ function factorial(n) {
 }
 
 // History tracking
-function addToHistory(entry) {
-  const history = document.getElementById("history");
-  const li = document.createElement("li");
-  li.textContent = entry;
-  li.className = "list-group-item";
-  history.prepend(li);
+function addToHistory(operation, result) {
+    const historyList = document.getElementById("historyList");
+
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${operation}</strong> = <span>${result}</span>`;
+    
+    historyList.prepend(li);
 }
 
 // Theme toggle
