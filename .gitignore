@@ -1,0 +1,29 @@
+# Node / npm
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python (if you’re using Flask/Django for backend)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build / cache
+dist/
+build/
+.cache/

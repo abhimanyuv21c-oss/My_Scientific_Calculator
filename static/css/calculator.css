@@ -1,0 +1,93 @@
+/* General */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9f9f9;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* Keypad */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.keypad button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s, background 0.2s;
+}
+
+.keypad button:hover {
+  background: #ececec;
+  transform: scale(1.05);
+}
+
+.keypad .clear {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.keypad .backspace {
+  background: #f1c40f;
+}
+
+.keypad .zero {
+  grid-column: span 4;
+}
+
+/* Operations */
+.operations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.operations button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2c3e50;
+  color: #fff;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.operations button:hover {
+  background: #34495e;
+  transform: scale(1.05);
+}
+
+/* History */
+#history {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-theme .form-control {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark-theme .keypad button {
+  background: #444;
+  color: #fff;
+}
+
+body.dark-theme .operations button {
+  background: #555;
+}
